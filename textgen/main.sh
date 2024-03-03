@@ -44,7 +44,7 @@ if [[ "$REINSTALL_TEXTGEN" || ! -f "/tmp/textgen.prepared" ]]; then
     prepare_repo
 
     cd GPTQ-for-LLaMa
-    python setup_cuda.py install
+    # python setup_cuda.py install
 
     pip uninstall -y llama-cpp-python
     CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python --no-cache-dir
